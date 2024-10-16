@@ -1,4 +1,5 @@
-import { StrictMode } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import { lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
@@ -8,15 +9,11 @@ import {
 } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
-import Product from "./pages/Product.jsx";
 
-// const Home = lazy(() => import("./pages/Home.jsx"));
-// const About = lazy(() => import("./pages/About.jsx"));
-// const Contact = lazy(() => import("./pages/Contact.jsx"));
-// const Product = lazy(() => import("./pages/Product.jsx"));
+const Home = lazy(() => import("./pages/Home.jsx"));
+const About = lazy(() => import("./pages/About.jsx"));
+const Contact = lazy(() => import("./pages/Contact.jsx"));
+const Product = lazy(() => import("./pages/Product.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
